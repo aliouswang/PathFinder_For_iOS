@@ -15,6 +15,11 @@
 		6BD0F6591FD00AC000054DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BD0F6571FD00AC000054DA3 /* LaunchScreen.storyboard */; };
 		6BD0F6641FD00AC000054DA3 /* PathFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0F6631FD00AC000054DA3 /* PathFinderTests.m */; };
 		6BD0F66F1FD00AC000054DA3 /* PathFinderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0F66E1FD00AC000054DA3 /* PathFinderUITests.m */; };
+		6BD0F67F1FD00C8500054DA3 /* Cross.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0F67E1FD00C8500054DA3 /* Cross.m */; };
+		6BD0F6821FD0106500054DA3 /* PreCross.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0F6811FD0106500054DA3 /* PreCross.m */; };
+		6BD0F6851FD0EB6F00054DA3 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0F6841FD0EB6F00054DA3 /* Util.m */; };
+		6BD0F6881FD0F58600054DA3 /* MinDistanceStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0F6871FD0F58600054DA3 /* MinDistanceStep.m */; };
+		6BD0F68C1FD1291000054DA3 /* DijstraPathFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD0F68B1FD1291000054DA3 /* DijstraPathFinder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,17 @@
 		6BD0F66A1FD00AC000054DA3 /* PathFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD0F66E1FD00AC000054DA3 /* PathFinderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathFinderUITests.m; sourceTree = "<group>"; };
 		6BD0F6701FD00AC000054DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BD0F67D1FD00C8500054DA3 /* Cross.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cross.h; sourceTree = "<group>"; };
+		6BD0F67E1FD00C8500054DA3 /* Cross.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cross.m; sourceTree = "<group>"; };
+		6BD0F6801FD0106500054DA3 /* PreCross.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreCross.h; sourceTree = "<group>"; };
+		6BD0F6811FD0106500054DA3 /* PreCross.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreCross.m; sourceTree = "<group>"; };
+		6BD0F6831FD0EB6F00054DA3 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		6BD0F6841FD0EB6F00054DA3 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		6BD0F6861FD0F58600054DA3 /* MinDistanceStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinDistanceStep.h; sourceTree = "<group>"; };
+		6BD0F6871FD0F58600054DA3 /* MinDistanceStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinDistanceStep.m; sourceTree = "<group>"; };
+		6BD0F6891FD1274600054DA3 /* IPathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPathFinder.h; sourceTree = "<group>"; };
+		6BD0F68A1FD1291000054DA3 /* DijstraPathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DijstraPathFinder.h; sourceTree = "<group>"; };
+		6BD0F68B1FD1291000054DA3 /* DijstraPathFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DijstraPathFinder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,7 @@
 		6BD0F6481FD00AC000054DA3 /* PathFinder */ = {
 			isa = PBXGroup;
 			children = (
+				6BD0F67C1FD00AEF00054DA3 /* map */,
 				6BD0F64C1FD00AC000054DA3 /* AppDelegate.h */,
 				6BD0F64D1FD00AC000054DA3 /* AppDelegate.m */,
 				6BD0F64F1FD00AC000054DA3 /* ViewController.h */,
@@ -138,6 +155,24 @@
 				6BD0F6701FD00AC000054DA3 /* Info.plist */,
 			);
 			path = PathFinderUITests;
+			sourceTree = "<group>";
+		};
+		6BD0F67C1FD00AEF00054DA3 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				6BD0F67D1FD00C8500054DA3 /* Cross.h */,
+				6BD0F67E1FD00C8500054DA3 /* Cross.m */,
+				6BD0F6801FD0106500054DA3 /* PreCross.h */,
+				6BD0F6811FD0106500054DA3 /* PreCross.m */,
+				6BD0F6831FD0EB6F00054DA3 /* Util.h */,
+				6BD0F6841FD0EB6F00054DA3 /* Util.m */,
+				6BD0F6861FD0F58600054DA3 /* MinDistanceStep.h */,
+				6BD0F6871FD0F58600054DA3 /* MinDistanceStep.m */,
+				6BD0F6891FD1274600054DA3 /* IPathFinder.h */,
+				6BD0F68A1FD1291000054DA3 /* DijstraPathFinder.h */,
+				6BD0F68B1FD1291000054DA3 /* DijstraPathFinder.m */,
+			);
+			name = map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD0F67F1FD00C8500054DA3 /* Cross.m in Sources */,
+				6BD0F6821FD0106500054DA3 /* PreCross.m in Sources */,
+				6BD0F6881FD0F58600054DA3 /* MinDistanceStep.m in Sources */,
 				6BD0F6511FD00AC000054DA3 /* ViewController.m in Sources */,
+				6BD0F68C1FD1291000054DA3 /* DijstraPathFinder.m in Sources */,
 				6BD0F64E1FD00AC000054DA3 /* AppDelegate.m in Sources */,
 				6BD0F64B1FD00AC000054DA3 /* main.m in Sources */,
+				6BD0F6851FD0EB6F00054DA3 /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
