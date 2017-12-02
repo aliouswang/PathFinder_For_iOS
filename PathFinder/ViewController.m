@@ -24,8 +24,8 @@
     pathFinder = [DijstraPathFinder new];
     
     NSMutableArray *allCrossList = [self mockCross];
-    Cross *start = [allCrossList objectAtIndex:0];
-    Cross *end = [allCrossList objectAtIndex:[allCrossList count] - 1];
+    Cross *start = [allCrossList objectAtIndex:2];
+    Cross *end = [allCrossList objectAtIndex:6];
     
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
     [dic setObject:@"" forKey:@"1"];

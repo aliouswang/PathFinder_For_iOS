@@ -13,13 +13,16 @@
 @implementation DijstraPathFinder {
     Cross *_startCross;
     Cross *_endCross;
-    int _crossCount;
+    NSUInteger _crossCount;
     NSMutableArray<Cross *> *_allCrossList;
     NSMutableSet *_outCrossSet;
     NSMutableDictionary *_fromStartDisMap;
     NSMutableArray<Cross *> *_nextCrossList;
 }
 
+//
+// 初始化参与计算的参数
+//
 - (void) initParams {
     _outCrossSet = [NSMutableSet new];
     _fromStartDisMap = [NSMutableDictionary new];
