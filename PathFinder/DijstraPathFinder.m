@@ -30,6 +30,9 @@
     [_nextCrossList addObject:_startCross];
 }
 
+//
+// 获得start和end 之间的最短路径，如果有多条最短路径，默认只会保存最先加入的一条。
+//
 - (MinDistanceStep *) getMinDistanceStepWithStart:(Cross *)start between:(Cross *)end from:(NSMutableArray<Cross *> *)allCrossList {
     _startCross = start;
     _endCross = end;
@@ -43,6 +46,9 @@
     return nil;
 }
 
+//
+// 根据fromStartDisMap中保存的所有其他点到起点的最短路径，注意这里的最短路径中返回的Cross节点是逆序的，
+//
 - (MinDistanceStep*) changeToMinStep {
     MinDistanceStep *minDistanceStep = [MinDistanceStep new];
     [minDistanceStep setMinDistance:[[_fromStartDisMap objectForKey:[_endCross crossId]] distance]];
@@ -90,7 +96,7 @@
         if ((![_nextCrossList containsObject:neighbor]) && (![_outCrossSet containsObject:neighbor])) {
             [_nextCrossList addObject:neighbor];
         }
-        
+        //检查更新最短路径
         if ([_fromStartDisMap.allKeys containsObject:[neighbor crossId]]) {
             if (totalStep < [[_fromStartDisMap objectForKey:[neighbor crossId]] distance]) {
                 PreCross *preCross = [[PreCross new] initWithDistance:totalStep and:start];
